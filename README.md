@@ -17,19 +17,19 @@ When performing numerical computations, one of the challenges you can run into i
 ### Part A: Identifying floating-point problems
 First, **type** and run the following program:
 
-![I SAID TYPE, NOT COPY/PASTE! NEVER COPY/PASTE CODE YOU DIDN’T WRITE. ESPECIALLY NOT FROM THE INTERNET!](roundoff_error_part_A_1.png)
+![a = 1 / 7 print(f"a = {a}") b = a * 7 print(f"b = a * 7 = {b}")](roundoff_error_part_A_1.png "I SAID TYPE, NOT COPY/PASTE! NEVER COPY/PASTE CODE YOU DIDN’T WRITE. ESPECIALLY NOT FROM THE INTERNET!")
 
 Notice that the value of `a` is rounded off. The value of `b`, if we have no roundoff, should be `1`. Is it? *Make a comment in your code answering the question.*
 
 Now add the following lines:
 
-![DID YOU TRY TO COPY/PASTE AGAIN? TYPE THE CODE! DON’T BE LAZY!](roundoff_error_part_A_2.png)
+![c = 2 * a d = 5 * a f = c + d print(f"f = 2 * a + 5 * a = {f}")](roundoff_error_part_A_2.png "DID YOU TRY TO COPY/PASTE AGAIN? TYPE THE CODE! DON’T BE LAZY!")
 
 In this case, the value of `f`, if we have no roundoff, should be `1`. Is it? *Make a comment in your code answering the question.*
 
 Finally, add the following lines:
 
-![STILL TRYING TO COPY/PASTE? THIS IS GOOD PRACTICE FOR TYPING! YOU’LL REMEMBER IT BETTER IF YOU TYPE INSTEAD OF COPY/PASTE!](roundoff_error_part_A_3.png)
+![from math import sqrt x = sqrt(1 / 3) print(f"x = {x}") y = x * x * 3 print(f"y = x * x * 3 = {y}") z = x * 3 * x print(f"z = x * 3 * x = {z}")](roundoff_error_part_A_3.png "STILL TRYING TO COPY/PASTE? THIS IS GOOD PRACTICE FOR TYPING! YOU’LL REMEMBER IT BETTER IF YOU TYPE INSTEAD OF COPY/PASTE!")
 
 Again, the values of `y` and `z`, if we have no roundoff error, should be `1` in both cases. Are the values 1? *Make a comment in your code answering the question.*
 
@@ -42,7 +42,7 @@ A common way for dealing with floating-point error is to use tolerances. Toleran
 
 Add to your code from Part A the following lines to compare values of the variables `b` and `f` using the concept of tolerance:
 
-![WHEN YOU COPY/PASTE, ‘ MAY BE WRITTEN FUNNY. YET ANOTHER REASON TO TYPE THE CODE!](roundoff_error_part_B.png)
+![TOL = 1e-10 # check if b and f are equal within specified tolerance if abs(b - f) < TOL:     print(f"b and f are equal within tolerance of {TOL}") else:     print(f"b and f are NOT equal within tolerance of {TOL}")](roundoff_error_part_B.png "WHEN YOU COPY/PASTE, ‘ MAY BE WRITTEN FUNNY. YET ANOTHER REASON TO TYPE THE CODE!")
 
 Add a similar tolerance check to your code for `y` and `z`. 
 
@@ -53,7 +53,7 @@ Computers operate in base 2 (binary). No matter how many digits you are willing 
 
 Add to your code from Part B the following lines:
 
-![AGGIES DO NOT LIE, CHEAT, OR STEAL, OR TOLERATE THOSE WHO DO. BE AN AGGIE, ALWAYS WRITE YOUR OWN CODE!](roundoff_error_part_C.png)
+![m = 0.1 print(f"m = {m}") n = 3 * m print(f"n = 3 * m = 0.3 {n == 0.3}") p = 7 * m print(f"p = 7 * m = 0.7 {p == 0.7}") q = n + p print(f"q = n + p = 1 {q == 1}")](roundoff_error_part_C.png "AGGIES DO NOT LIE, CHEAT, OR STEAL, OR TOLERATE THOSE WHO DO. BE AN AGGIE, ALWAYS WRITE YOUR OWN CODE!")
 
 Did the results surprise you? If you rewrote your program for [Lab Topic 1 Activity 3](https://github.com/tamu-edu-students/engr-102-lab-1?tab=readme-ov-file#follow-directions) using variables and successive divisions for `x` (`x = 1/10`, `x = 1/100`, etc) would you expect to see the same output as your original program? Check out this link to the Python documentation: https://docs.python.org/3/tutorial/floatingpoint.html. This info helps explain these issues. As the document states, ". . .this is not a bug in Python, and it is not a bug in your code either." Instead, the problems stem from the way a floating-point number is represented by the hardware. **Awareness of these issues may save you a lot debugging effort in the future.** Also check out this link: Binary Tutorial - 5. Binary Fractions and Floating Point https://ryanstutorials.net/binary-tutorial/binary-floating-point.php
 
