@@ -17,19 +17,19 @@ When performing numerical computations, one of the challenges you can run into i
 ### Part A: Identifying floating-point problems
 First, **type** and run the following program:
 
-image 1 goes here
+![I SAID TYPE, NOT COPY/PASTE! NEVER COPY/PASTE CODE YOU DIDN’T WRITE. ESPECIALLY NOT FROM THE INTERNET!](roundoff_error_part_A_1.png)
 
 Notice that the value of `a` is rounded off. The value of `b`, if we have no roundoff, should be `1`. Is it? *Make a comment in your code answering the question.*
 
 Now add the following lines:
 
-image 2 goes here
+![DID YOU TRY TO COPY/PASTE AGAIN? TYPE THE CODE! DON’T BE LAZY!](roundoff_error_part_A_2.png)
 
 In this case, the value of `f`, if we have no roundoff, should be `1`. Is it? *Make a comment in your code answering the question.*
 
 Finally, add the following lines:
 
-image 3 goes here
+![STILL TRYING TO COPY/PASTE? THIS IS GOOD PRACTICE FOR TYPING! YOU’LL REMEMBER IT BETTER IF YOU TYPE INSTEAD OF COPY/PASTE!](roundoff_error_part_A_3.png)
 
 Again, the values of `y` and `z`, if we have no roundoff error, should be `1` in both cases. Are the values 1? *Make a comment in your code answering the question.*
 
@@ -42,7 +42,7 @@ A common way for dealing with floating-point error is to use tolerances. Toleran
 
 Add to your code from Part A the following lines to compare values of the variables `b` and `f` using the concept of tolerance:
 
-image 4 goes here
+![WHEN YOU COPY/PASTE, ‘ MAY BE WRITTEN FUNNY. YET ANOTHER REASON TO TYPE THE CODE!](roundoff_error_part_B.png)
 
 Add a similar tolerance check to your code for `y` and `z`. 
 
@@ -53,7 +53,7 @@ Computers operate in base 2 (binary). No matter how many digits you are willing 
 
 Add to your code from Part B the following lines:
 
-image 5 goes here
+![AGGIES DO NOT LIE, CHEAT, OR STEAL, OR TOLERATE THOSE WHO DO. BE AN AGGIE, ALWAYS WRITE YOUR OWN CODE!](roundoff_error_part_C.png)
 
 Did the results surprise you? If you rewrote your program for [Lab Topic 1 Activity 3](https://github.com/tamu-edu-students/engr-102-lab-1?tab=readme-ov-file#follow-directions) using variables and successive divisions for `x` (`x = 1/10`, `x = 1/100`, etc) would you expect to see the same output as your original program? Check out this link to the Python documentation: https://docs.python.org/3/tutorial/floatingpoint.html. This info helps explain these issues. As the document states, ". . .this is not a bug in Python, and it is not a bug in your code either." Instead, the problems stem from the way a floating-point number is represented by the hardware. **Awareness of these issues may save you a lot debugging effort in the future.** Also check out this link: Binary Tutorial - 5. Binary Fractions and Floating Point https://ryanstutorials.net/binary-tutorial/binary-floating-point.php
 
