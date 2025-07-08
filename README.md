@@ -162,13 +162,15 @@ Simple 2: True
 
 
 ## Frequently Asked Questions
-1. **Activity 2 (make change) do I have to manually check all possible cases?** Do you have to? No. *Should* you? Yes! How do you know your code works if you don't test it thoroughly? Of course if you're lazy you can just submit to Gradescope and see if it passes all of my tests. :)
+1. **What is tolerance?** Tolerance is the engineering version of wiggle room. Computers work in binary (base 2) so some numbers can't be represented exactly. Instead they get rounded off in the 15th or so decimal place. That means when we do math with rounded numbers, that very small error gets carried through. It's like using `3.14` instead of `3.1415926` for `pi`. So even though my calculation is correct, it has a small rounding error and isn't exactly equal. This could be a problem when you use conditional statements. `0.9999999` isn't exactly equal to `1.0`. But if the rounding error is in the 10th decimal place... who cares? Engineers rarely need to have that kind of precision. So we use tolerance to give us some wiggle room in our code. If our calculated answer is within some tolerance (the absolute value of my answer minus the real answer is very small) then they are effectively equal.
 
-2. **Activity 3 (pretty equation) how do I separate the minus sign from a negative number?** Get clever! This is a great time to use an if statement. If the number is negative, use string concatenation to display a minus sign, space, and the number times -1 (to flip the sign). The absolute value function may also be useful: `abs(number)`.
+2. **Activity 2 (make change) do I have to manually check all possible cases?** Do you have to? No. *Should* you? Yes! How do you know your code works if you don't test it thoroughly? Of course if you're lazy you can just submit to Gradescope and see if it passes all of my tests. :)
 
-3. **Activity 3 (pretty equation) I am frustrated. Why is this problem so hard?** Well, I thought this problem would be a fun challenge, but you're right, it is hard. You will need several `if-elif-else` statements and will likely need to nest some of them. If you're struggling, ask for help during class!
+3. **Activity 3 (pretty equation) how do I separate the minus sign from a negative number?** Get clever! This is a great time to use an if statement. If the number is negative, use string concatenation to display a minus sign, space, and the number times -1 (to flip the sign). The absolute value function may also be useful: `abs(number)`.
 
-4. **Activity 3 (pretty equation) I tried using backspace (`\b`) and Gradescope labels it `\x08` instead. What's going on?** Gradescope displays the `\b` character as `\x08`. To get around using `\b`, try building up your equation string one piece at a time using string concatenation. For example:
+4. **Activity 3 (pretty equation) I am frustrated. Why is this problem so hard?** Well, I thought this problem would be a fun challenge, but you're right, it is hard. You will need several `if-elif-else` statements and will likely need to nest some of them. If you're struggling, ask for help during class!
+
+5. **Activity 3 (pretty equation) I tried using backspace (`\b`) and Gradescope labels it `\x08` instead. What's going on?** Gradescope displays the `\b` character as `\x08`. To get around using `\b`, try building up your equation string one piece at a time using string concatenation. For example:
 ```python
 a = 1
 b = 2
@@ -178,9 +180,9 @@ myeq += " + " + str(b) + "x"
 myeq += " - " + str(abs(c)) + " = 0"
 print(myeq)
 ```
-5. **Activity 4 (Boolean expressions) I can't use `if-elif-else` blocks?!** Nope! You don't need `if-elif-else` blocks for this activity. Instead, use Boolean expressions. You know, something like `a and not b` which evaluates to a Boolean value. Try saying it out loud (in English) then translate to Python. 
+6. **Activity 4 (Boolean expressions) I can't use `if-elif-else` blocks?!** Nope! You don't need `if-elif-else` blocks for this activity. Instead, use Boolean expressions. You know, something like `a and not b` which evaluates to a Boolean value. Try saying it out loud (in English) then translate to Python. 
 
-6. **Activity 4 (Boolean expressions) the comment test case is failing but I commented my code. What gives?** Did you include the comment to separate sections of your code? Make sure you have the right number of `#`'s on that line.
+7. **Activity 4 (Boolean expressions) the comment test case is failing but I commented my code. What gives?** Did you include the comment to separate sections of your code? Make sure you have the right number of `#`'s on that line.
 
 Have a question you don't see here? Email your instructor!
 
