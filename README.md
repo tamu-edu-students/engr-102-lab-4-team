@@ -92,7 +92,18 @@ You received $0.98 in change. That is...
 
 **Hint**: You may encounter a case where your code doesn't calculate the correct change. It may be helpful to reread [Activity #1 (Roundoff error)](#roundoff-error) in this lab.
 
+
 ## Pretty Equation
+A quadratic equation is an equation of the form $$Ax^2+Bx+C = 0$$ where `A`, `B`, and `C` are the coefficients of the equation. Write a program named `pretty_equation.py` that takes as input the coefficients `A`, `B`, and `C` and outputs the quadratic equation in a nice format. Your program should not print the coefficient `1` or a term with a coefficient `0` and should replace plus signs (`+`) with minus signs (`-`) for negative coefficients. Include one space between the sign and the term. You may want to review the string formatting document posted with Lecture 3 and [Lab 3 (team)](https://github.com/tamu-edu-students/engr-102-lab-3-team). Use the output format shown below. You may assume the user only enters integers.
+
+Example output (using inputs `-1`, `-2`, `3`):
+```
+Please enter the coefficient A: -1
+Please enter the coefficient B: -2
+Please enter the coefficient C: 3
+The quadratic equation is - x^2 - 2x + 3 = 0
+```
+
 
 ## Boolean Expressions
 
