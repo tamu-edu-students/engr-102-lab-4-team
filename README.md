@@ -106,6 +106,60 @@ The quadratic equation is - x^2 - 2x + 3 = 0
 
 
 ## Boolean Expressions
+The purpose of this program is to give you practice with performing Boolean logic with Python. Create a file named `boolean_expressions.py` for this activity. Each team member is responsible for knowing this material, and it may be a good idea for all team members to practice keying in the code given. You are required to include code for Part A, Part B, and Part C below in your file for submission. Part D is optional and should be included in your file if you attempt it. **Please separate the various parts of your code with the following comment to identify the separate sections (copy/paste into your file with the appropriate letter).**
+```
+############ Part A ############ 
+```
+
+### Part A: Inputting Boolean values from the keyboard
+Write a simple code to take as input from the user Boolean values from the keyboard for variables `a`, `b`, and `c`. The user will enter a value to indicate Boolean True and Boolean False from the keyboard, and your code should create a Boolean variable representing the user's input. **Use Boolean expressions to create these variables**; do **NOT** use `if-else` blocks. These Boolean variables will be used in Boolean expressions in parts B, C, and D.
+
+The user should be able to enter `True`, `T`, or `t` for Boolean `True`. To indicate Boolean `False`, the user should be able to enter `False`, `F`, or `f`. **Note**: Numeric input is **not** permissible. *If this proves to be a bit of a challenge, review Lecture 3 slides covering Boolean expressions and assignment.*
+
+### Part B: Evaluating Booleans
+Add to your program code that evaluates the following Boolean expressions using the variables `a`, `b`, and `c` from Part A. The program should output the value `True` or `False` of the expression for the entered values. Use Boolean expressions; do **NOT** use `if-elif-else` blocks. See the example output below.
+1. a and b and c
+2. a or b or c
+
+### Part C: Writing Boolean expressions
+Extend your program above to include Boolean expressions (do **NOT** use `if-elif-else` blocks) that meet the criteria in each item below using the variables `a`, `b`, and `c` from Part A. Your program should output the value `True` or `False` based on the previously entered values.
+1. Given values for two Boolean variables `a` and `b`, create a Boolean expression for "exclusive or" or "XOR" between `a` and `b`. This expression evaluates to `True` if just one of `a` or `b` is True, but not if both are True or both are False. Do **NOT** use `^`, instead use **only** `not`, `and`, and `or` to construct an equivalent statement.
+2. Given values for three Boolean variables `a`, `b`, and `c`, create a Boolean expression to determine if `True` was entered an odd number of times. This expression evaluates to `True` if exactly 1 or 3 of the variables `a`, `b`, and `c` is True, and is `False` otherwise. Use **only** `not`, `and`, and `or`.
+
+Example output (using inputs `T`, `T`, `T`):
+```
+Enter True or False for a: T
+Enter True or False for b: T
+Enter True or False for c: T
+a and b and c: True
+a or b or c: True
+XOR: False
+Odd number: True
+```
+
+### Part D: Other Activities (Optional 1 bonus point)
+- Part D is strongly suggested for those wanting to major in Computer Science, Computer Engineering, Electrical Engineering, or another computationally heavy field.
+- If you would like to learn more about Boolean Expression Simplification, follow this link to see the list of rules used for the Boolean expression simplifications: 
+http://sandbox.mc.edu/~bennet/cs110/boolalg/rules.html
+- Keep in mind that multiplication represents Boolean `and` and addition represents Boolean `or`. That means `AB` is equivalent to `A and B`, `A+B` is equivalent to `A or B`, and `A-bar` is equivalent to `not A`.
+- Then take a look at the examples at http://sandbox.mc.edu/~bennet/cs110/boolalg/simple.html. Note that `T` stands for `True`.
+
+Add to your program above using the variables `a`, `b`, and `c` from Part A and evaluate the following Boolean expressions.  
+1. `(not (a and not b) or (not c and b)) and (not b) or (not a and b and not c) or (a and not b)`
+2. `(not ((b or not c) and (not a or not c))) or (not (c or not (b and c))) or (a and not c) and (not a or (a and b and c) or (a and ((b and not c) or (not b))))`
+
+Then, create simpler (reduced) versions that still give the same results. Your program should output the value `True` or `False` based on the previously entered values. Output the results of the complex expression and the simple version. **If your team completes Part D correctly, you will receive 1 bonus point on this assignment.**
+
+Part D example output (using inputs `T`, `T`, `T`):
+```
+Complex 1: False
+Simple 1: False
+Complex 2: True
+Simple 2: True
+```
+
+**Hint**: There are 2 possible values for each of `a`, `b`, and `c`. Any expression that evaluates the same for all possible combinations of `True`/`False` of those values is an equivalent Boolean expression! 
+
 
 ## Frequently Asked Questions
 1. **Activity 2 (make change) do I have to manually check all possible cases?** Do you have to? No. *Should* you? Yes! How do you know your code works if you don't test it thoroughly? Of course if you're lazy you can just submit to Gradescope and see if it passes all of my tests. :)
