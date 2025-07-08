@@ -58,8 +58,39 @@ Add to your code from Part B the following lines:
 Did the results surprise you? If you rewrote your program for [Lab Topic 1 Activity 3](https://github.com/tamu-edu-students/engr-102-lab-1?tab=readme-ov-file#follow-directions) using variables and successive divisions for `x` (`x = 1/10`, `x = 1/100`, etc) would you expect to see the same output as your original program? Check out this link to the Python documentation: https://docs.python.org/3/tutorial/floatingpoint.html. This info helps explain these issues. As the document states, ". . .this is not a bug in Python, and it is not a bug in your code either." Instead, the problems stem from the way a floating-point number is represented by the hardware. **Awareness of these issues may save you a lot debugging effort in the future.** Also check out this link: Binary Tutorial - 5. Binary Fractions and Floating Point https://ryanstutorials.net/binary-tutorial/binary-floating-point.php
 
 
-
 ## Make Change
+Write a program that computes the change made when someone buys something. Your program should prompt the user to input from the keyboard how much they paid and how much it costs. Your program should then output the change and list how many of each type of coin. You may assume the change is always less than $1.
+
+**Although this may seem like an easy task, it can be quite challenging to get right. You MUST *think before you code*. Discuss with your team how to approach the problem and develop an algorithm (a sequence of steps to perform a computation or solve a problem) for any possible input. This task may take up to 30 minutes. It will take much longer if you do not think before you code.**
+
+**First**, your team should develop and document an algorithm for solving this problem. You may choose to write it by hand, type it in a document, draw a picture, etc, but you do not have to turn it in. Manually check your algorithm and check your answers versus the examples given below as well as others you come up with. *You should not code until you develop and check your algorithm by hand*. **After you develop an algorithm**, translate it into Python code and name your file `make_change.py`. Verify that your code delivers the correct output for all of the examples you thought up.
+
+Your program should perform the following general tasks:
+- Store input in appropriately named variables
+- Convert the input to a number if you plan to perform mathematical operations with the input value
+- Perform necessary decisions/procedures/calculations and store results in appropriately named variables
+- Output results to the screen using the format below
+
+Example output (using inputs `1`, `0.71`):
+```
+How much did you pay? 1
+How much did it cost? 0.71
+You received $0.29 in change. That is...
+1 quarter
+4 pennies
+```
+
+Example output (using inputs `2`, `1.02`):
+```
+How much did you pay? 2
+How much did it cost? 1.02
+You received $0.98 in change. That is...
+3 quarters
+2 dimes
+3 pennies
+```
+
+**Hint**: You may encounter a case where your code doesn't calculate the correct change. It may be helpful to reread [Activity #1 (Roundoff error)](#roundoff-error) in this lab.
 
 ## Pretty Equation
 
