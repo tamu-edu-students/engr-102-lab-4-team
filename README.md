@@ -9,6 +9,55 @@ This lab consists of four team activities. Please submit the following files to 
 4. [Boolean Expressions](#boolean-expressions)
 
 ## Roundoff Error
+When performing numerical computations, one of the challenges you can run into is floating-point roundoff error. This occurs when the computer needs to represent a number that would require an infinite number of decimal digits, but rounds them off after some point. That small roundoff error can cause some significant issues. This activity is meant to help you understand floating-point roundoff error a bit more and learn about one way of dealing with it. Create a Python file named `roundoff_error.py` for the following three-part activity. Please separate the various parts of your code with the following comment identifying the separate sections (copy/paste into your file with the appropriate letter).
+```
+############ Part A ############
+```
+
+### Part A: Identifying floating-point problems
+First, **type** and run the following program:
+
+image 1 goes here
+
+Notice that the value of `a` is rounded off. The value of `b`, if we have no roundoff, should be `1`. Is it? *Make a comment in your code answering the question.*
+
+Now add the following lines:
+
+image 2 goes here
+
+In this case, the value of `f`, if we have no roundoff, should be `1`. Is it? *Make a comment in your code answering the question.*
+
+Finally, add the following lines:
+
+image 3 goes here
+
+Again, the values of `y` and `z`, if we have no roundoff error, should be `1` in both cases. Are the values 1? *Make a comment in your code answering the question.*
+
+Was that surprising? You should have seen from those examples that sometimes we will encounter issues due to roundoff error and sometimes we won’t. We can’t always predict when roundoff error will be obvious.
+
+### Part B: Tolerances for Comparisons
+In Part A, you should have seen that two different ways of computing values that should be identical might actually produce values that are different, if only by a tiny bit. In some cases, this is not a problem. For example, we usually don’t care if speed is incorrect in the 10<sup>th</sup> decimal place, since we usually can’t measure speed that precisely anyway. But, floating point error can become a big problem if comparisons are made with floating-point values.  
+
+A common way for dealing with floating-point error is to use tolerances. Tolerances let you compare two values that are close, but not identical to each other. Rather than checking whether or not `a == b`, we instead compute the absolute value of the difference in `a` and `b` and see if that quantity (the difference) is within some small distance away from `0` (either above or below). That small value, called the tolerance, is decided upon by the programmer and the value chosen is highly dependent on the problem at hand. If the absolute value of the difference between `a` and `b` is less than the tolerance, then we may consider `a` and `b` to be equal for the problem at hand. The tolerance is commonly abbreviated `TOL` or `EPS` (short for epsilon (`ε`)). `1e-6` is usually a good value for tolerance, but may vary with specific applications.
+
+Add to your code from Part A the following lines to compare values of the variables `b` and `f` using the concept of tolerance:
+
+image 4 goes here
+
+Add a similar tolerance check to your code for `y` and `z`. 
+
+As you write programs, think about your comparisons and decide if you need to use tolerances. If you are making a comparison to check for exact equality and you might have some floating-point error, you will probably want to use tolerances, while if you are just checking which of two things is larger, a tolerance comparison is likely unnecessary. Tolerances are particularly helpful when checking things like whether a denominator is (nearly) 0, and thus a division is likely to create error.
+
+### Part C: Illusions of Precision
+Computers operate in base 2 (binary). No matter how many digits you are willing to use, some numbers still cannot be represented exactly, like the number 0.1. Most people aren't aware that 0.1 is stored as an approximation because Python keeps the number of digits manageable by displaying a rounded value. Even though the printed result of a calculation may look exact, know that the actual stored value is the nearest representable binary fraction.
+
+Add to your code from Part B the following lines:
+
+image 5 goes here
+
+Did the results surprise you? If you rewrote your program for [Lab Topic 1 Activity 3](https://github.com/tamu-edu-students/engr-102-lab-1?tab=readme-ov-file#follow-directions) using variables and successive divisions for `x` (`x = 1/10`, `x = 1/100`, etc) would you expect to see the same output as your original program? Check out this link to the Python documentation: https://docs.python.org/3/tutorial/floatingpoint.html. This info helps explain these issues. As the document states, ". . .this is not a bug in Python, and it is not a bug in your code either." Instead, the problems stem from the way a floating-point number is represented by the hardware. **Awareness of these issues may save you a lot debugging effort in the future.** Also check out this link: Binary Tutorial - 5. Binary Fractions and Floating Point https://ryanstutorials.net/binary-tutorial/binary-floating-point.php
+
+
 
 ## Make Change
 
