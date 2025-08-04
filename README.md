@@ -139,10 +139,9 @@ Odd number: True
 
 ### Part D: Other Activities (Optional 1 bonus point)
 - Part D is strongly suggested for those wanting to major in Computer Science, Computer Engineering, Electrical Engineering, or another computationally heavy field.
-- If you would like to learn more about Boolean Expression Simplification, follow this link to see the list of rules used for the Boolean expression simplifications: 
-http://sandbox.mc.edu/~bennet/cs110/boolalg/rules.html
+- If you would like to learn more about Boolean Expression Simplification, [follow this link to see the list of rules used for the Boolean expression simplifications](http://sandbox.mc.edu/~bennet/cs110/boolalg/rules.html)
 - Keep in mind that multiplication represents Boolean `and` and addition represents Boolean `or`. That means `AB` is equivalent to `A and B`, `A+B` is equivalent to `A or B`, and `A-bar` is equivalent to `not A`.
-- Then take a look at the examples at http://sandbox.mc.edu/~bennet/cs110/boolalg/simple.html. Note that `T` stands for `True`.
+- Then take a look at [the examples on this website](http://sandbox.mc.edu/~bennet/cs110/boolalg/simple.html). Note that `T` stands for `True`.
 
 Add to your program above using the variables `a`, `b`, and `c` from Part A and evaluate the following Boolean expressions.  
 1. `(not (a and not b) or (not c and b)) and (not b) or (not a and b and not c) or (a and not b)`
