@@ -90,7 +90,7 @@ You received $0.98 in change. That is...
 3 pennies
 ```
 
-**Hint**: You may encounter a case where your code doesn't calculate the correct change. It may be helpful to reread [Activity #1 (Roundoff error)](#roundoff-error) in this lab.
+**Hint**: You may encounter a case where your code [doesn't calculate the correct change](https://www.youtube.com/watch?v=yZjCQ3T5yXo). It may be helpful to reread [Activity #1 (Roundoff error)](#roundoff-error) in this lab.
 
 
 ## Pretty Equation
